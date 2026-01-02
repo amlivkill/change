@@ -2,6 +2,7 @@
   "name": "CHANGE - Centre for Himalayan Agriculture and Nature Foundation",
   "description": "A comprehensive web portal for CHANGE, a Section 8 Not-for-Profit organization dedicated to sustainable agriculture and rural development in Uttarakhand.",
   "requestFramePermissions": [
-    "geolocation"
+    "geolocation",
+    "microphone"
   ]
 }
