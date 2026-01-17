@@ -1,5 +1,5 @@
-
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Contact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -65,7 +65,7 @@ const Contact: React.FC = () => {
               <h2 className="text-sm font-bold text-emerald-800 dark:text-emerald-400 uppercase tracking-widest mb-6">Registered Office</h2>
               <p className="text-xl text-slate-700 dark:text-slate-300 font-light leading-relaxed">
                 Badshahi Thaul, Tehri Garhwal,<br />
-                Uttarakhand, India
+                Uttarakhand - 249199, India
               </p>
             </div>
 
@@ -77,10 +77,11 @@ const Contact: React.FC = () => {
             </div>
 
             <div>
-              <h2 className="text-sm font-bold text-emerald-800 dark:text-emerald-400 uppercase tracking-widest mb-6">Phone</h2>
-              <p className="text-xl text-slate-700 dark:text-slate-300 font-medium">
-                +91-XXXXXXXXXX
+              <h2 className="text-sm font-bold text-emerald-800 dark:text-emerald-400 uppercase tracking-widest mb-6">Phone (HQ)</h2>
+              <p className="text-xl text-slate-700 dark:text-slate-300 font-medium font-mono">
+                +91 1376 232 456
               </p>
+              <p className="text-sm text-slate-500 mt-1">Mon-Fri, 9am - 5pm IST</p>
             </div>
           </div>
 
@@ -162,6 +163,9 @@ const Contact: React.FC = () => {
               >
                 Send Message
               </button>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-4 text-center">
+                By submitting this form, you agree to our <Link to="/legal#privacy" className="underline hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Privacy Policy</Link> and <Link to="/legal#terms" className="underline hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Terms of Use</Link>.
+              </p>
             </form>
           </div>
         </div>

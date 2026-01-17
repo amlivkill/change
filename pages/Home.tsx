@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -344,7 +343,9 @@ const Home: React.FC = () => {
               </button>
             </form>
           )}
-          <p className="text-[10px] text-emerald-600/60 dark:text-emerald-500/60 mt-6 uppercase tracking-widest font-bold">Privacy first. We never share your data.</p>
+          <p className="text-[10px] text-emerald-600/60 dark:text-emerald-500/60 mt-6 font-bold">
+            Privacy first. By subscribing, you agree to our <Link to="/legal#privacy" className="underline hover:text-emerald-800 dark:hover:text-emerald-300">Privacy Policy</Link> and <Link to="/legal#terms" className="underline hover:text-emerald-800 dark:hover:text-emerald-300">Terms of Use</Link>.
+          </p>
         </div>
       </section>
 

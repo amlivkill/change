@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -83,16 +82,21 @@ const Footer: React.FC = () => {
               {done ? (
                 <p className="text-emerald-400 text-sm font-bold">Thank you for joining our mission!</p>
               ) : (
-                <form onSubmit={handleSub} className="flex gap-2 max-w-sm">
-                  <input 
-                    type="email" 
-                    placeholder="Email Address" 
-                    className="bg-slate-800 border-none rounded-lg px-4 py-2 text-sm w-full focus:ring-2 focus:ring-emerald-500 text-white"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                  <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-bold transition-colors shrink-0">Join</button>
-                </form>
+                <>
+                  <form onSubmit={handleSub} className="flex gap-2 max-w-sm">
+                    <input 
+                      type="email" 
+                      placeholder="Email Address" 
+                      className="bg-slate-800 border-none rounded-lg px-4 py-2 text-sm w-full focus:ring-2 focus:ring-emerald-500 text-white"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-bold transition-colors shrink-0">Join</button>
+                  </form>
+                  <p className="text-[10px] text-slate-500 mt-2">
+                    By submitting this form, you agree to our <Link to="/legal#privacy" className="underline hover:text-emerald-400 transition-colors">Privacy Policy</Link> and <Link to="/legal#terms" className="underline hover:text-emerald-400 transition-colors">Terms of Use</Link>.
+                  </p>
+                </>
               )}
             </div>
 
@@ -175,8 +179,8 @@ const Footer: React.FC = () => {
           <div className="mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-slate-500 uppercase tracking-widest font-bold">
             <span>© {new Date().getFullYear()} Centre for Himalayan Agriculture and Nature Foundation</span>
             <div className="flex gap-6">
-              <Link to="/legal" className="hover:text-slate-300">Privacy Policy</Link>
-              <Link to="/legal" className="hover:text-slate-300">Terms of Use</Link>
+              <Link to="/legal#privacy" className="hover:text-slate-300">Privacy Policy</Link>
+              <Link to="/legal#terms" className="hover:text-slate-300">Terms of Use</Link>
             </div>
           </div>
         </div>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -89,6 +88,9 @@ const News: React.FC = () => {
               Subscribe
             </button>
           </form>
+          <p className="text-[10px] text-emerald-100/60 mt-4 relative z-10">
+            By submitting this form, you agree to our <Link to="/legal#privacy" className="underline hover:text-white transition-colors">Privacy Policy</Link> and <Link to="/legal#terms" className="underline hover:text-white transition-colors">Terms of Use</Link>.
+          </p>
         </div>
       </div>
     </div>
